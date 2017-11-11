@@ -7,6 +7,9 @@ int		ft_read_file(t_data *data, const char *file)
 	while (data->ret > 0)
 	{
 		data->ret = read(data->fd, data->buff, 21);
+		if (!ft_check_tetri(data))
+			exit (EXIT_FAILURE);
+		data->nb_tetri++;
 	}
 	close (data->fd);
 	return (1);

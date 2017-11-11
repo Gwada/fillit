@@ -43,5 +43,6 @@ char	*ft_strsub(const char *s, unsigned int star, size_t len);
 char	*ft_strnew(size_t size);
 void	ft_bzero(void *s, size_t n);
 int		ft_open_file(t_data *data, const char *file);
+int		ft_check_tetri(t_data *data);
 
 #endif
