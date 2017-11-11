@@ -26,6 +26,7 @@ typedef struct	s_data
 	int			nb_tetri;
 	char		**map;
 	char		buff[22];
+	t_tetri		*tetri;
 }				t_data;
 
 /*
@@ -44,5 +45,6 @@ char	*ft_strnew(size_t size);
 void	ft_bzero(void *s, size_t n);
 int		ft_open_file(t_data *data, const char *file);
 int		ft_check_tetri(t_data *data);
+int		ft_tetri_error(t_data *data);
 
 #endif
