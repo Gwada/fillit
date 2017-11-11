@@ -1,6 +1,6 @@
 #include "../includes/fillit.h"
 
-int		ft_param_error(int nb_param)
+int		ft_nbparam_error(int nb_param)
 {
 	if (nb_param != 2)
 		ft_putstr("error");
