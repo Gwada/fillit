@@ -28,11 +28,11 @@ separes d'une ligne vide qu'il faudra agencer dans le plus petit carre possible.
 
 - Un 'tetrimino' respecte les regles suivantes:
    - 4 lignes de 4 caractere suivis d'un retour a la ligne.
-      - ex : ....'\n'
-             ....'\n'
-             ....'\n'
-             ....'\n'
-             '\n'
+      - ....'\n'
+      - ....'\n'
+      - ....'\n'
+      - ....'\n'
+      - '\n' (si il y a au moins un autre 'tetrimino')
    - un tetriminos est compose de 4 caracteres qui sont des '#'.
    - les cases vides sont representees par des '.'.
    - chaque caractere d'un 'tetrimono' doit etre en contact 
