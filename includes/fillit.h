@@ -15,6 +15,10 @@
 **	STRUCTURES
 */
 
+typedef struct	s_tetri
+{
+}				t_tetri;
+
 typedef struct	s_data
 {
 	int			fd;
@@ -31,8 +35,13 @@ typedef struct	s_data
 void	ft_putchar(char c);
 void	ft_putstr(char const *s);
 int		ft_nbparam_error(int nb_param);
-void	ft_init(t_data *data);
-int		ft_read_file(t_data *data, const char *filename);
+int		ft_init(t_data *data, const char *file);
+int		ft_read_file(t_data *data, const char *file);
 void	ft_file_read_error(void);
+size_t	ft_strlen(const char *s);
+char	*ft_strsub(const char *s, unsigned int star, size_t len);
+char	*ft_strnew(size_t size);
+void	ft_bzero(void *s, size_t n);
+int		ft_open_file(t_data *data, const char *file);
 
 #endif

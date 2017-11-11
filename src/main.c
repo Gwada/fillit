@@ -4,16 +4,12 @@ int		main(int argc, char **argv)
 {
 	t_data	data;
 
-	if (!ft_nbparam_error(argc))
-		exit ();
-	else
+	if (ft_nbparam_error(argc))
 	{
-		ft_init(&data);
-		if (!ft_read_file(&data, argv[1]))
-		{
-			ft_file_read_error();
-			exit();
-		}
+		if (!ft_init(&data, argv[1]))
+			exit (EXIT_FAILURE);
 	}
-	return (0);
+	else
+		exit (EXIT_FAILURE);
+	exit (EXIT_SUCCESS);
 }
