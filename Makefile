@@ -17,9 +17,9 @@ SRC = ft_bzero.c \
 		ft_strnew.c \
 		ft_strsub.c \
 		ft_tetri_error.c \
-		ft_check_car.c \
 		ft_read_tetri.c \
 		ft_new_tetri.c \
+		ft_find_type.c \
 		main.c
 
 OBJ = $(SRC:.c=.o)

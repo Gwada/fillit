@@ -17,7 +17,6 @@
 
 typedef struct	s_tetri
 {
-	int		nb_bloc;
 	int		type;
 	char	map[4][5];
 	char	car;
@@ -28,6 +27,9 @@ typedef struct	s_data
 	int			fd;
 	int			ret;
 	int			nb_tetri;
+	int			nb_bloc;
+	int			error;
+	int			again;
 	char		**map;
 	char		buff[22];
 	t_tetri		*tetri[27];
@@ -48,10 +50,10 @@ char	*ft_strsub(const char *s, unsigned int star, size_t len);
 char	*ft_strnew(size_t size);
 void	ft_bzero(void *s, size_t n);
 int		ft_open_file(t_data *data, const char *file);
-int		ft_check_tetri(t_data *data);
+void	ft_check_tetri(t_data *data);
 int		ft_tetri_error(t_data *data);
-int		ft_check_car(t_data *data, size_t i);
-int		ft_read_tetri(t_data *data);
+void	ft_read_tetri(t_data *data);
 t_tetri	*ft_new_tetri(void);
+void	ft_find_type(t_data *data);
 
 #endif
