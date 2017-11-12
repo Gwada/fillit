@@ -2,5 +2,5 @@
 
 void	ft_file_read_error(void)
 {
-	ft_putstr("error");
+	ft_putstr("error\n");
 }
