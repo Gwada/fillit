@@ -6,7 +6,7 @@
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:30:20 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/13 15:32:34 by dlavaury         ###   ########.fr       */
+/*   Updated: 2017/11/13 19:25:01 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ int		ft_read_file(t_data *data, const char *file)
 				return (0); /* Error malloc on return quoi? */
 			ft_check_tetri(data);
 			data->nb_tetri++;
+			if (data->nb_tetri > 26)
+				data->error = 1;
 		}
 		if (data->error)
 			ft_tetri_error(data);

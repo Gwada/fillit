@@ -6,7 +6,7 @@
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:28:40 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/13 17:34:49 by dlavaury         ###   ########.fr       */
+/*   Updated: 2017/11/13 19:31:24 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ void	ft_check_tetri(t_data *data)
 
 	i = -1;
 	ft_putstr(data->buff);
+	printf("tetri n. %d\n", data->nb_tetri + 1);
 	data->nb_b = 0;
 	while (++i < 20 && !data->error)
 	{
@@ -33,4 +34,5 @@ void	ft_check_tetri(t_data *data)
 	}
 	if ((data->buff[i] != '\n' && data->buff[i]) || !data->buff[i])
 		data->error = 1;
+	printf("\n");
 }
