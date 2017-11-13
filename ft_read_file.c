@@ -6,7 +6,7 @@
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:30:20 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/13 19:25:01 by dlavaury         ###   ########.fr       */
+/*   Updated: 2017/11/13 20:34:17 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,5 @@ int		ft_read_file(t_data *data, const char *file)
 			ft_tetri_error(data);
 	}
 	close(data->fd);
-	return (1);
+	return (data->error ? 0 : 1);
 }
