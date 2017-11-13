@@ -6,7 +6,7 @@
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:35:47 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/13 14:35:48 by dlavaury         ###   ########.fr       */
+/*   Updated: 2017/11/13 17:52:50 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,7 @@ t_tetri	*ft_new_tetri(void)
 
 	if (!(new = (t_tetri*)malloc(sizeof(t_tetri))))
 		return (NULL);
+	new->map[0][0] = 0;
+	new->map[0][1] = 0;
 	return (new);
 }

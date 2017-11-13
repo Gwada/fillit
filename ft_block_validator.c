@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_read_file.c                                     :+:      :+:    :+:   */
+/*   ft_block_validator.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/13 14:30:20 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/13 15:32:34 by dlavaury         ###   ########.fr       */
+/*   Created: 2017/11/13 17:15:32 by dlavaury          #+#    #+#             */
+/*   Updated: 2017/11/13 17:59:48 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-int		ft_read_file(t_data *data, const char *file)
+void	ft_block_validator(t_data *data, int i)
 {
-	if (!ft_open_file(data, file))
-		return (0);
-	while (data->ret && !data->error)
-	{
-		ft_read_tetri(data);
-		if (data->ret)
-		{
-			if (!(data->tetri[data->nb_tetri] = ft_new_tetri()))
-				return (0); /* Error malloc on return quoi? */
-			ft_check_tetri(data);
-			data->nb_tetri++;
-		}
-		if (data->error)
-			ft_tetri_error(data);
-	}
-	close(data->fd);
-	return (1);
+	data->error = 1;
+	if (data->nb_b < 3
+	&& ((i + 1 < 19 && data->buff[i + 1] == '#')
+	|| (i + 5 < 19 && data->buff[i + 5] == '#')))
+		data->error = 0;
+	else if (data->nb_b == 3
+	&& ((data->buff[i - 1] == '#')
+	|| (data->buff[i - 5] == '#')))
+		data->error = 0;
 }

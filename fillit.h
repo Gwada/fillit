@@ -6,7 +6,7 @@
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:25:22 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/13 14:27:12 by dlavaury         ###   ########.fr       */
+/*   Updated: 2017/11/13 17:49:30 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 # include <sys/types.h>
 # include <sys/stat.h>
 # include <fcntl.h>
+# include <stdio.h>
 
 /*
 **	STRUCTURES
@@ -29,9 +30,8 @@
 
 typedef struct	s_tetri
 {
-	int			type;
-	char		map[4][5];
 	char		car;
+	int			map[4][2];
 }				t_tetri;
 
 typedef struct	s_data
@@ -39,7 +39,7 @@ typedef struct	s_data
 	int			fd;
 	int			ret;
 	int			nb_tetri;
-	int			nb_bloc;
+	int			nb_b;
 	int			error;
 	int			again;
 	char		**map;
@@ -66,7 +66,7 @@ void			ft_check_tetri(t_data *data);
 int				ft_tetri_error(t_data *data);
 void			ft_read_tetri(t_data *data);
 t_tetri			*ft_new_tetri(void);
-void			ft_find_type(t_data *data);
-void			ft_check_type(const char *str, size_t i);
+void			ft_find_type(t_data *data, int i);
+void			ft_block_validator(t_data *data, int i);
 
 #endif
