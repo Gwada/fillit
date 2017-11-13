@@ -6,7 +6,7 @@
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:25:22 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/13 19:06:37 by dlavaury         ###   ########.fr       */
+/*   Updated: 2017/11/13 20:27:58 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ typedef struct	s_data
 	int			nb_tetri;
 	int			nb_b;
 	int			error;
-	int			again;
 	char		**map;
 	char		buff[22];
 	t_tetri		*tetri[27];
