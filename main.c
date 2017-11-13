@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/13 14:27:22 by dlavaury          #+#    #+#             */
+/*   Updated: 2017/11/13 14:27:51 by dlavaury         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "fillit.h"
 
 int		main(int argc, char **argv)
@@ -7,9 +19,9 @@ int		main(int argc, char **argv)
 	if (ft_nbparam_error(argc))
 	{
 		if (!ft_init(&data, argv[1]))
-			exit (EXIT_FAILURE);
+			exit(EXIT_FAILURE);
 	}
 	else
-		exit (EXIT_FAILURE);
-	exit (EXIT_SUCCESS);
+		exit(EXIT_FAILURE);
+	exit(EXIT_SUCCESS);
 }

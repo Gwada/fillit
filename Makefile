@@ -20,6 +20,7 @@ SRC = ft_bzero.c \
 		ft_read_tetri.c \
 		ft_new_tetri.c \
 		ft_find_type.c \
+		ft_check_type.c \
 		main.c
 
 OBJ = $(SRC:.c=.o)

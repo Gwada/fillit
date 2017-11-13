@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_read_file.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/13 14:30:20 by dlavaury          #+#    #+#             */
+/*   Updated: 2017/11/13 14:30:59 by dlavaury         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "fillit.h"
 
 int		ft_read_file(t_data *data, const char *file)
@@ -19,6 +31,6 @@ int		ft_read_file(t_data *data, const char *file)
 		if (data->error)
 			ft_tetri_error(data);
 	}
-	close (data->fd);
+	close(data->fd);
 	return (1);
 }
