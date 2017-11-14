@@ -6,7 +6,7 @@
 #    By: elebouch <elebouch@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/14 13:43:52 by elebouch          #+#    #+#              #
-#    Updated: 2017/11/14 13:58:27 by elebouch         ###   ########.fr        #
+#    Updated: 2017/11/14 16:56:41 by dlavaury         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,9 @@ SRC = ft_bzero.c \
 	  ft_block_validator.c \
 	  ft_realloc.c \
 	  ft_fillit.c \
+	  ft_map_creator.c \
+	  ft_map_cleaner.c \
+	  ft_put_map.c \
 	  main.c
 
 OBJ = $(SRC:.c=.o)
@@ -58,19 +61,19 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@$(CC) $(CFLAGS) $^ -o $(NAME)
-	@echo "\n$(NAME) compilation : $(_GREEN)done$(_END)\n"
+	@echo "\n$(_CYAN)$(NAME) compilation$(_END)	: $(_GREEN)done$(_END)"
 
 %.o: %.c
-	@printf "%-60b\r" "$(ECHO) $(_GREEN) Compiling $@ $(_END)"
+	@printf "%-60b\r" "$(ECHO) Compiling $@"
 	@$(CC) -o $@ -c $< $(CFLAGS)
 
 clean:
 	@rm -f $(OBJ)
-	@echo "clean: $(_GREEN)done$(_END)"
+	@echo "$(_YELLOW)clean$(_END)	: $(_GREEN)done$(_END)"
 
 fclean:	clean
 	@rm -f $(NAME)
-	@echo "fclean: $(_GREEN)done$(_END)"
+	@echo "$(_RED)fclean$(_END)	: $(_GREEN)done$(_END)"
 
 re: fclean all
 

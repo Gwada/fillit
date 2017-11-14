@@ -6,7 +6,7 @@
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:27:22 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/14 13:57:35 by elebouch         ###   ########.fr       */
+/*   Updated: 2017/11/14 16:56:24 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,10 @@ int		main(int argc, char **argv)
 	{
 		if (!ft_init(&data, argv[1]))
 			exit(EXIT_FAILURE);
-		ft_fillit(&data);
+		if (!ft_fillit(&data, 0))
+			exit(EXIT_FAILURE);
 	}
 	else
 		exit(EXIT_FAILURE);
-	exit(EXIT_SUCCESS);
+	return (0);
 }

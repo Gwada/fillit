@@ -6,7 +6,7 @@
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:25:22 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/14 14:15:17 by elebouch         ###   ########.fr       */
+/*   Updated: 2017/11/14 16:56:19 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,10 @@ typedef struct	s_data
 	int			nb_b;
 	int			again;
 	int			error;
+	int			size;
 	char		**map;
 	char		buff[21];
 	t_tetri		*tetri[27];
-	size_t		size;
 }				t_data;
 
 /*
@@ -68,5 +68,9 @@ t_tetri			*ft_new_tetri(void);
 void			ft_find_type(t_data *data, int i);
 void			ft_block_validator(t_data *data, int i);
 char			*ft_realloc(char *to_free, int *size);
-void			ft_fillit(t_data *data);
+int				ft_fillit(t_data *data, size_t t);
+int				ft_map_creator(t_data *data);
+void			ft_map_cleaner(t_data *data);
+void			ft_put_map(t_data *data);
+
 #endif

@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_fillit.c                                        :+:      :+:    :+:   */
+/*   ft_put_map.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: elebouch <elebouch@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/14 13:57:39 by elebouch          #+#    #+#             */
-/*   Updated: 2017/11/14 16:56:35 by dlavaury         ###   ########.fr       */
+/*   Created: 2017/11/14 16:33:28 by dlavaury          #+#    #+#             */
+/*   Updated: 2017/11/14 16:56:29 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-int		ft_fillit(t_data *data, size_t t)
+void	ft_put_map(t_data *data)
 {
 	int i;
+	int j;
 
 	i = -1;
-	if (!ft_map_creator(data))
-		return (0);
-	while (++i < data->size && t < 26)
+	while (++i < data->size)
 	{
-		ft_put_map(data);
+		j = -1;
+		while (++j < data->size)
+			ft_putchar(data->map[i][j]);
+		ft_putchar('\n');
 	}
-	ft_map_cleaner(data);
-	return (1);
 }

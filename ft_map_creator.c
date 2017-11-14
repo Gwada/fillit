@@ -1,28 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_fillit.c                                        :+:      :+:    :+:   */
+/*   ft_map_creator.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: elebouch <elebouch@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/14 13:57:39 by elebouch          #+#    #+#             */
-/*   Updated: 2017/11/14 16:56:35 by dlavaury         ###   ########.fr       */
+/*   Created: 2017/11/14 15:40:07 by dlavaury          #+#    #+#             */
+/*   Updated: 2017/11/14 16:32:32 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-int		ft_fillit(t_data *data, size_t t)
+int		ft_map_creator(t_data *data)
 {
 	int i;
 
 	i = -1;
-	if (!ft_map_creator(data))
+	if (!(data->map = (char**)malloc(sizeof(char*) * data->size)))
 		return (0);
-	while (++i < data->size && t < 26)
+	while (++i < data->size)
 	{
-		ft_put_map(data);
+		if (!(data->map[i] = (char*)malloc(sizeof(char) * data->size)))
+		{
+			while (--i >= 0)
+				free(data->map[i]);
+			free(data->map);
+			return (0);
+		}
+		ft_bzero(data->map[i], data->size);
 	}
-	ft_map_cleaner(data);
 	return (1);
 }
