@@ -6,7 +6,7 @@
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:25:22 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/14 13:42:10 by dlavaury         ###   ########.fr       */
+/*   Updated: 2017/11/14 13:51:35 by elebouch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,5 +66,5 @@ void			ft_read_tetri(t_data *data);
 t_tetri			*ft_new_tetri(void);
 void			ft_find_type(t_data *data, int i);
 void			ft_block_validator(t_data *data, int i);
-
+char			*ft_realloc(char *to_free, int *size);
 #endif
