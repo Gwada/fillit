@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_init.c                                          :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/13 14:34:36 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/14 09:53:30 by dlavaury         ###   ########.fr       */
+/*   Created: 2017/11/06 16:42:31 by dlavaury          #+#    #+#             */
+/*   Updated: 2017/11/06 16:42:32 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-int		ft_init(t_data *data, const char *file)
+size_t	ft_strlen(const char *s)
 {
-	int i;
+	size_t	i;
 
-	i = -1;
-	data->fd = 0;
-	data->ret = 1;
-	data->nb_tetri = 0;
-	data->nb_b = 0;
-	data->error = 0;
-	ft_bzero(data->buff, 22);
-	while (++i < 26)
-		data->tetri[i] = NULL;
-	ft_read_file(data, file);
-	return (data->error ? 0 : 1);
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
 }

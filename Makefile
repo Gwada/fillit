@@ -13,7 +13,6 @@ SRC = ft_bzero.c \
 		ft_putchar.c \
 		ft_putstr.c \
 		ft_read_file.c \
-		ft_strlen.c \
 		ft_strnew.c \
 		ft_strsub.c \
 		ft_tetri_error.c \
