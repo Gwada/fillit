@@ -6,7 +6,7 @@
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:25:22 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/14 09:53:26 by dlavaury         ###   ########.fr       */
+/*   Updated: 2017/11/14 13:11:50 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,10 @@ typedef struct	s_data
 	int			ret;
 	int			nb_tetri;
 	int			nb_b;
+	int			again;
 	int			error;
 	char		**map;
-	char		buff[22];
+	char		buff[21];
 	t_tetri		*tetri[27];
 }				t_data;
 
@@ -66,5 +67,6 @@ void			ft_read_tetri(t_data *data);
 t_tetri			*ft_new_tetri(void);
 void			ft_find_type(t_data *data, int i);
 void			ft_block_validator(t_data *data, int i);
+void			ft_check_end(t_data *data);
 
 #endif

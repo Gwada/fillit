@@ -6,7 +6,7 @@
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:34:36 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/14 09:53:30 by dlavaury         ###   ########.fr       */
+/*   Updated: 2017/11/14 12:44:00 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int		ft_init(t_data *data, const char *file)
 	data->nb_tetri = 0;
 	data->nb_b = 0;
 	data->error = 0;
-	ft_bzero(data->buff, 22);
+	data->again = 1;
 	while (++i < 26)
 		data->tetri[i] = NULL;
 	ft_read_file(data, file);

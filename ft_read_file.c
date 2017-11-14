@@ -6,7 +6,7 @@
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:30:20 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/13 20:34:17 by dlavaury         ###   ########.fr       */
+/*   Updated: 2017/11/14 13:12:08 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,15 @@ int		ft_read_file(t_data *data, const char *file)
 {
 	if (!ft_open_file(data, file))
 		return (0);
-	while (data->ret && !data->error)
+	while (data->ret && !data->error && data->again)
 	{
-		ft_read_tetri(data);
-		if (data->ret)
+		if (data->again)
+			ft_read_tetri(data);
+		if (data->ret && !data->error && data->again)
 		{
 			if (!(data->tetri[data->nb_tetri] = ft_new_tetri()))
-				return (0); /* Error malloc on return quoi? */
+				return (0);
 			ft_check_tetri(data);
-			data->nb_tetri++;
 			if (data->nb_tetri > 26)
 				data->error = 1;
 		}
@@ -32,5 +32,5 @@ int		ft_read_file(t_data *data, const char *file)
 			ft_tetri_error(data);
 	}
 	close(data->fd);
-	return (data->error ? 0 : 1);
+	return (data->error);
 }

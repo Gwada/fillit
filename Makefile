@@ -1,6 +1,6 @@
-CC = cc
+GCC = gcc
 
-CFLAGS = -Wall -Wextra -Werror 
+CFLAGS = -Wall -Wextra -Werror -I ./
 
 NAME = fillit
 
@@ -20,43 +20,23 @@ SRC = ft_bzero.c \
 		ft_new_tetri.c \
 		ft_find_type.c \
 		ft_block_validator.c \
+		ft_chek_end.c \
 		main.c
-
-# PROGRESS BAR
-T = $(words $(SRC))
-N = 0
-C = $(words $N)$(eval N := x $N)
-ECHO = "[`expr $C '*' 100 / $T`%]"
-
-#Color
-_GREY=\x1b[30m
-_RED=\x1b[31m
-_GREEN=\x1b[32m
-_YELLOW=\x1b[33m
-_BLUE=\x1b[34m
-_PURPLE=\x1b[35m
-_CYAN=\x1b[36m
-_WHITE=\x1b[37m
-_END=\x1b[0m
 
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@$(CC) $(CFLAGS) $? -o $(NAME)
-	@echo "\n$(NAME) compilation : $(_GREEN)done$(_END)"
-
-%.o: %.c
-	@printf "%-60b\r" "$(ECHO) $(_GREEN) Compiling $@ $(_END)"
-	@$(CC) $(CFLAGS) -c $< -o $@
+	@$(GCC) $(CFLAGS) $(OBJ) -o $(NAME)
+	@echo "$(NAME) compilation : done"
 
 clean:
 	@rm -f $(OBJ)
-	@echo "clean: $(_GREEN)done$(_END)"
+	@echo "clean done"
 
 fclean:	clean
 	@rm -f $(NAME)
-	@echo "fclean: $(_GREEN)done$(_END)"
+	@echo "fclean done"
 
 re: fclean all

@@ -6,7 +6,7 @@
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:31:31 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/13 14:34:23 by dlavaury         ###   ########.fr       */
+/*   Updated: 2017/11/14 12:56:22 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 
 void	ft_read_tetri(t_data *data)
 {
+	ft_bzero(data->buff, 21);
 	if ((data->ret = read(data->fd, data->buff, 21)) == -1)
 	{
-		ft_putstr("error (erreur de lecture)\n");/*put error if read error ? */
+		ft_putstr("error\n");
 		data->error = 1;
 	}
+	if (!data->ret && data->again)
+		data->error = 1;
 }
