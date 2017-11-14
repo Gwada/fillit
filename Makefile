@@ -6,7 +6,6 @@ NAME = fillit
 
 SRC = ft_bzero.c \
 		ft_check_tetri.c \
-		ft_file_read_error.c \
 		ft_init.c \
 		ft_open_file.c \
 		ft_param_error.c \
@@ -20,7 +19,6 @@ SRC = ft_bzero.c \
 		ft_new_tetri.c \
 		ft_find_type.c \
 		ft_block_validator.c \
-		ft_chek_end.c \
 		main.c
 
 OBJ = $(SRC:.c=.o)

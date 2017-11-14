@@ -6,7 +6,7 @@
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:37:41 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/14 13:12:05 by dlavaury         ###   ########.fr       */
+/*   Updated: 2017/11/14 13:38:46 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ void	ft_find_type(t_data *data, int i)
 		}
 		data->tetri[data->nb_tetri]->map[data->nb_b][0] = (i / 5) - (j / 5);
 		data->tetri[data->nb_tetri]->map[data->nb_b][1] = (i % 5) - (j % 5);
-		printf("bloc %d = bloc 1[abs += %d][ord += %d]\n", data->nb_b + 1, i/5 - j/5, i%5 - j%5);
 	}
 	data->nb_b++;
 	if (data->nb_b > 4)
