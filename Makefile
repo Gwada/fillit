@@ -1,6 +1,6 @@
-GCC = gcc
+CC = cc
 
-CFLAGS = -Wall -Wextra -Werror -I ./
+CFLAGS = -Wall -Wextra -Werror 
 
 NAME = fillit
 
@@ -28,8 +28,11 @@ OBJ = $(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@$(GCC) $(CFLAGS) $(OBJ) -o $(NAME)
+	@$(CC) $(CFLAGS) $? -o $(NAME)
 	@echo "$(NAME) compilation : done"
+
+%.o: %.c
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	@rm -f $(OBJ)
