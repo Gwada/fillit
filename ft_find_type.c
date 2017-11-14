@@ -6,7 +6,7 @@
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:37:41 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/14 13:38:46 by dlavaury         ###   ########.fr       */
+/*   Updated: 2017/11/14 13:54:19 by elebouch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_find_type(t_data *data, int i)
 {
 	int	j;
-	int		block;
+	int	block;
 
 	ft_block_validator(data, i);
 	block = data->nb_b;
