@@ -6,7 +6,7 @@
 #    By: elebouch <elebouch@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/14 13:43:52 by elebouch          #+#    #+#              #
-#    Updated: 2017/11/14 13:51:49 by elebouch         ###   ########.fr        #
+#    Updated: 2017/11/14 13:58:27 by elebouch         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,7 @@ SRC = ft_bzero.c \
 	  ft_find_type.c \
 	  ft_block_validator.c \
 	  ft_realloc.c \
+	  ft_fillit.c \
 	  main.c
 
 OBJ = $(SRC:.c=.o)
