@@ -6,7 +6,7 @@
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:34:36 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/15 15:28:10 by elebouch         ###   ########.fr       */
+/*   Updated: 2017/11/15 16:33:54 by elebouch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ int		ft_init(t_data *data, const char *file)
 	while (i * i < data->nb_tetri * 4)
 		i++;
 	data->size = i;
-	return (data->error ? 0 : 1);
+	return (data->error);
 }
