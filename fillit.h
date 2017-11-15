@@ -6,7 +6,7 @@
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:25:22 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/14 21:06:33 by dlavaury         ###   ########.fr       */
+/*   Updated: 2017/11/15 14:33:28 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,5 +73,7 @@ int				ft_map_creator(t_data *data);
 void			ft_map_cleaner(t_data *data);
 void			ft_put_map(t_data *data);
 int				ft_is_free(t_data *data, int tetrim, int i, int j);
+void			ft_try_tetri(t_data *data, int tetrim, int i, int j);
+void			ft_remove_last(t_data *data, int c_tetri, int i, int j);
 
 #endif
