@@ -6,7 +6,7 @@
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:25:22 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/15 16:28:23 by dlavaury         ###   ########.fr       */
+/*   Updated: 2017/11/15 19:58:01 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,6 @@ void			ft_putstr(char const *s);
 int				ft_nbparam_error(int nb_param);
 int				ft_init(t_data *data, const char *file);
 int				ft_read_file(t_data *data, const char *file);
-char			*ft_strsub(const char *s, unsigned int star, size_t len);
-char			*ft_strnew(size_t size);
 void			ft_bzero(void *s, size_t n);
 int				ft_open_file(t_data *data, const char *file);
 void			ft_check_tetri(t_data *data);
