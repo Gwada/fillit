@@ -6,7 +6,7 @@
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:30:20 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/15 14:59:01 by elebouch         ###   ########.fr       */
+/*   Updated: 2017/11/15 16:52:53 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int		ft_read_file(t_data *data, const char *file)
 {
 	if (!ft_open_file(data, file))
-		return (0);
+		return (1);
 	while (data->ret && !data->error && data->again)
 	{
 		if (data->again)

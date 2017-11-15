@@ -6,7 +6,7 @@
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:35:04 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/15 15:55:26 by elebouch         ###   ########.fr       */
+/*   Updated: 2017/11/15 16:49:31 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 int		ft_nbparam_error(int nb_param)
 {
 	if (nb_param != 2)
-		ft_putstr("usage: ./fillit sample_file\n");
+		ft_putstr("error\n");
 	return (nb_param == 2 ? 1 : 0);
 }
