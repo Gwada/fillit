@@ -6,7 +6,7 @@
 #    By: elebouch <elebouch@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/14 13:43:52 by elebouch          #+#    #+#              #
-#    Updated: 2017/11/15 19:24:37 by dlavaury         ###   ########.fr        #
+#    Updated: 2017/11/15 20:07:37 by dlavaury         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,7 +62,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@$(CC) $(CFLAGS) $^ -o $(NAME)
-	@echo "\n$(_CYAN)$(NAME) compilation$(_END)	: $(_GREEN)done$(_END)"
+	@echo "\n$(NAME) compilation	: $(_GREEN)done$(_END)"
 
 %.o: %.c
 	@printf "%-60b\r" "$(ECHO) Compiling $@"
@@ -74,7 +74,7 @@ clean:
 
 fclean:	clean
 	@rm -f $(NAME)
-	@echo "$(_RED)fclean$(_END)	: $(_GREEN)done$(_END)"
+	@echo "$(_YELLOW)fclean$(_END)	: $(_GREEN)done$(_END)"
 
 re: fclean all
 
