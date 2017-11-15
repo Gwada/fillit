@@ -6,7 +6,7 @@
 #    By: elebouch <elebouch@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/14 13:43:52 by elebouch          #+#    #+#              #
-#    Updated: 2017/11/14 16:56:41 by dlavaury         ###   ########.fr        #
+#    Updated: 2017/11/14 21:08:59 by dlavaury         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,11 +31,11 @@ SRC = ft_bzero.c \
 	  ft_new_tetri.c \
 	  ft_find_type.c \
 	  ft_block_validator.c \
-	  ft_realloc.c \
 	  ft_fillit.c \
 	  ft_map_creator.c \
 	  ft_map_cleaner.c \
 	  ft_put_map.c \
+	  ft_is_free.c \
 	  main.c
 
 OBJ = $(SRC:.c=.o)

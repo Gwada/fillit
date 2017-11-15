@@ -6,7 +6,7 @@
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 15:40:07 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/14 16:32:32 by dlavaury         ###   ########.fr       */
+/*   Updated: 2017/11/14 20:37:22 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ int		ft_map_creator(t_data *data)
 		}
 		ft_bzero(data->map[i], data->size);
 	}
+	data->error = 1;
 	return (1);
 }
