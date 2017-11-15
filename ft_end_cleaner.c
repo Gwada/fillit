@@ -6,9 +6,11 @@
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 14:46:44 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/15 14:49:12 by dlavaury         ###   ########.fr       */
+/*   Updated: 2017/11/15 14:52:06 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "fillit.h"
 
 void	ft_end_cleaner(t_data *data)
 {
