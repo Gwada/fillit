@@ -6,7 +6,7 @@
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:30:20 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/14 13:54:34 by elebouch         ###   ########.fr       */
+/*   Updated: 2017/11/15 14:59:01 by elebouch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int		ft_read_file(t_data *data, const char *file)
 			ft_tetri_error(data);
 	}
 	close(data->fd);
-	!data->error ? ft_putstr("correct file\n") : ft_putstr("error in file -> clean tab done\n");
+	if (data->error)
+		ft_putstr("error\n");
 	return (data->error);
 }

@@ -6,7 +6,7 @@
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:27:22 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/15 14:45:49 by dlavaury         ###   ########.fr       */
+/*   Updated: 2017/11/15 15:28:53 by elebouch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,19 @@ int		main(int argc, char **argv)
 
 	if (ft_nbparam_error(argc))
 	{
-		if (!ft_init(&data, argv[1]))
+		if (ft_init(&data, argv[1]))
+		{
+			data.error = 1;
+			if (ft_fillit(&data, 0, 0, 0))
+			{
+				ft_end_cleaner(&data);
+				exit(EXIT_SUCCESS);
+			}
+			else
+				exit(EXIT_FAILURE);
+		}
+		else
 			exit(EXIT_FAILURE);
-		if (!ft_fillit(&data, 0, 0, 0))
-			exit(EXIT_FAILURE);
-		ft_end_cleaner(&data);
 	}
 	else
 		exit(EXIT_FAILURE);
