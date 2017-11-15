@@ -1,30 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_end_cleaner.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/13 14:27:22 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/15 14:45:49 by dlavaury         ###   ########.fr       */
+/*   Created: 2017/11/15 14:46:44 by dlavaury          #+#    #+#             */
+/*   Updated: 2017/11/15 14:49:12 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
-
-int		main(int argc, char **argv)
+void	ft_end_cleaner(t_data *data)
 {
-	t_data	data;
+	int i;
 
-	if (ft_nbparam_error(argc))
-	{
-		if (!ft_init(&data, argv[1]))
-			exit(EXIT_FAILURE);
-		if (!ft_fillit(&data, 0, 0, 0))
-			exit(EXIT_FAILURE);
-		ft_end_cleaner(&data);
-	}
-	else
-		exit(EXIT_FAILURE);
-	return (0);
+	i = -1;
+	ft_map_cleaner(data);
+	while (++i < data->nb_tetri)
+		free(data->tetri[i]);
 }
