@@ -6,7 +6,7 @@
 #    By: elebouch <elebouch@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/14 13:43:52 by elebouch          #+#    #+#              #
-#    Updated: 2017/11/15 13:46:10 by dlavaury         ###   ########.fr        #
+#    Updated: 2017/11/15 14:50:56 by dlavaury         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,6 +38,7 @@ SRC = ft_bzero.c \
 	  ft_is_free.c \
 	  ft_try_tetri.c \
 	  ft_remove_last.c \
+	  ft_end_cleaner.c \
 	  main.c
 
 OBJ = $(SRC:.c=.o)
