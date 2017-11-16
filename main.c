@@ -6,7 +6,7 @@
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:27:22 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/15 16:46:42 by dlavaury         ###   ########.fr       */
+/*   Updated: 2017/11/16 12:25:55 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,4 @@ int		main(int argc, char **argv)
 		}
 	}
 	exit(EXIT_FAILURE);
-	return (0);
 }

@@ -6,18 +6,17 @@
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:28:01 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/14 13:35:24 by dlavaury         ###   ########.fr       */
+/*   Updated: 2017/11/16 12:23:37 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-int		ft_tetri_error(t_data *data)
+void	ft_tetri_error(t_data *data)
 {
 	int		i;
 
 	i = -1;
 	while (++i < data->nb_tetri)
 		free(data->tetri[i]);
-	return (0);
 }

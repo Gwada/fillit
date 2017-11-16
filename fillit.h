@@ -6,7 +6,7 @@
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:25:22 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/15 19:58:01 by dlavaury         ###   ########.fr       */
+/*   Updated: 2017/11/16 12:18:50 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int				ft_read_file(t_data *data, const char *file);
 void			ft_bzero(void *s, size_t n);
 int				ft_open_file(t_data *data, const char *file);
 void			ft_check_tetri(t_data *data);
-int				ft_tetri_error(t_data *data);
+void			ft_tetri_error(t_data *data);
 void			ft_read_tetri(t_data *data);
 t_tetri			*ft_new_tetri(void);
 void			ft_find_type(t_data *data, int i);
