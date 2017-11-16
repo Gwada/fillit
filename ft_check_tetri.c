@@ -6,7 +6,7 @@
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:28:40 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/16 18:32:40 by dlavaury         ###   ########.fr       */
+/*   Updated: 2017/11/16 20:16:30 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ void	ft_check_tetri(t_data *data)
 	data->tetri[data->nb_tetri]->car = 'A' + data->nb_tetri;
 	while (++i < 20 && !data->error)
 	{
-		if ((i + 1) % 5)
+		if (!data->error && (i + 1) % 5)
 		{
 			if (data->buff[i] != '#' && data->buff[i] != '.')
 				data->error = 1;
-			if (data->buff[i] == '#')
+			if (data->buff[i] == '#' && ft_block_validator(data, i))
 				ft_find_type(data, i);
 		}
 		else if (data->buff[i] != '\n')

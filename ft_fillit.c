@@ -6,7 +6,7 @@
 /*   By: elebouch <elebouch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 13:57:39 by elebouch          #+#    #+#             */
-/*   Updated: 2017/11/15 16:50:27 by dlavaury         ###   ########.fr       */
+/*   Updated: 2017/11/16 20:58:36 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,16 +41,10 @@ int				ft_fillit(t_data *data, int tetri, int i, int j)
 		if (i == data->size)
 			return (ft_oversize(data, tetri));
 		if (ft_is_free(data, tetri, i, j))
-		{
-			ft_try_tetri(data, tetri, i, j);
 			if (ft_fillit(data, tetri + 1, 0, 0))
 				return (1);
 			else
-			{
-				ft_remove_last(data, tetri, i, j);
-				j++;
-			}
-		}
+				ft_remove_last(data, tetri, i, j++);
 		else
 			j++;
 	}

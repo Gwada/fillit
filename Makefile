@@ -6,7 +6,7 @@
 #    By: elebouch <elebouch@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/14 13:43:52 by elebouch          #+#    #+#              #
-#    Updated: 2017/11/15 20:07:37 by dlavaury         ###   ########.fr        #
+#    Updated: 2017/11/16 20:23:19 by dlavaury         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,6 @@ SRC = ft_bzero.c \
 	  ft_map_cleaner.c \
 	  ft_put_map.c \
 	  ft_is_free.c \
-	  ft_try_tetri.c \
 	  ft_remove_last.c \
 	  ft_end_cleaner.c \
 	  main.c

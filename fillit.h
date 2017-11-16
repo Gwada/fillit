@@ -6,7 +6,7 @@
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:25:22 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/16 12:18:50 by dlavaury         ###   ########.fr       */
+/*   Updated: 2017/11/16 20:23:39 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@
 
 typedef struct	s_tetri
 {
+	int			i;
 	char		car;
 	int			map[4][2];
 }				t_tetri;
@@ -63,14 +64,13 @@ void			ft_tetri_error(t_data *data);
 void			ft_read_tetri(t_data *data);
 t_tetri			*ft_new_tetri(void);
 void			ft_find_type(t_data *data, int i);
-void			ft_block_validator(t_data *data, int i);
+int				ft_block_validator(t_data *data, int i);
 char			*ft_realloc(char *to_free, int *size);
 int				ft_fillit(t_data *data, int tetri, int i, int j);
 int				ft_map_creator(t_data *data);
 void			ft_map_cleaner(t_data *data);
 void			ft_put_map(t_data *data);
 int				ft_is_free(t_data *data, int tetrim, int i, int j);
-void			ft_try_tetri(t_data *data, int tetrim, int i, int j);
 void			ft_remove_last(t_data *data, int c_tetri, int i, int j);
 void			ft_end_cleaner(t_data *data);
 
