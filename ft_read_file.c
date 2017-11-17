@@ -6,7 +6,7 @@
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:30:20 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/16 12:25:01 by dlavaury         ###   ########.fr       */
+/*   Updated: 2017/11/17 09:44:53 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,6 @@ int		ft_read_file(t_data *data, const char *file)
 	}
 	close(data->fd);
 	if (data->error)
-		ft_putstr("error\n");
+		write(1, "error\n", 6);
 	return (data->error);
 }

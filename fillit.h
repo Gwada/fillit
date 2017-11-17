@@ -6,7 +6,7 @@
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:25:22 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/16 20:23:39 by dlavaury         ###   ########.fr       */
+/*   Updated: 2017/11/17 09:44:55 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,6 @@ typedef struct	s_data
 **	PROTOTYPES
 */
 
-void			ft_putchar(char c);
-void			ft_putstr(char const *s);
 int				ft_nbparam_error(int nb_param);
 int				ft_init(t_data *data, const char *file);
 int				ft_read_file(t_data *data, const char *file);

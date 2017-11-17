@@ -6,7 +6,7 @@
 #    By: elebouch <elebouch@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/14 13:43:52 by elebouch          #+#    #+#              #
-#    Updated: 2017/11/16 20:23:19 by dlavaury         ###   ########.fr        #
+#    Updated: 2017/11/17 09:40:22 by dlavaury         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,8 +21,6 @@ SRC = ft_bzero.c \
 	  ft_init.c \
 	  ft_open_file.c \
 	  ft_param_error.c \
-	  ft_putchar.c \
-	  ft_putstr.c \
 	  ft_read_file.c \
 	  ft_tetri_error.c \
 	  ft_read_tetri.c \

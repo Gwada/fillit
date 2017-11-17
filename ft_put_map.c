@@ -6,7 +6,7 @@
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 16:33:28 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/15 14:23:19 by dlavaury         ###   ########.fr       */
+/*   Updated: 2017/11/17 09:31:26 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_put_map(t_data *data)
 	{
 		j = -1;
 		while (++j < data->size)
-			ft_putchar(data->map[i][j]);
-		ft_putchar('\n');
+			write(1, &data->map[i][j], 1);
+		write(1, "\n", 1);
 	}
 }
