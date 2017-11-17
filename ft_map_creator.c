@@ -6,7 +6,7 @@
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 15:40:07 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/15 14:17:03 by dlavaury         ###   ########.fr       */
+/*   Updated: 2017/11/17 10:06:16 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ int		ft_map_creator(t_data *data)
 	int j;
 
 	i = -1;
-	j = -1;
 	if (data->error)
 	{
 		if (!(data->map = (char**)malloc(sizeof(char*) * data->size)))
@@ -32,9 +31,9 @@ int		ft_map_creator(t_data *data)
 				free(data->map);
 				return (0);
 			}
+			j = -1;
 			while (++j < data->size)
 				data->map[i][j] = '.';
-			j = -1;
 		}
 	}
 	data->error = 0;
