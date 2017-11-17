@@ -6,7 +6,7 @@
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 17:15:32 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/17 20:09:57 by dlavaury         ###   ########.fr       */
+/*   Updated: 2017/11/17 20:36:20 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,10 +52,14 @@ static void	ft_third_block(t_data *data, int i)
 		data->error = 0;
 }
 
+static void	ft_last_block(t_data *data, int i)
+{
+	if (data->buff[i - 1] == '#' || data->buff[i - 5] == '#')
+		data->error = 0;
+}
+
 int			ft_block_validator(t_data *data, int i)
 {
-	if (data->nb_b == 3)
-		return (1);
 	data->error = 1;
 	if (!data->nb_b)
 		ft_first_block(data, i);
@@ -63,5 +67,7 @@ int			ft_block_validator(t_data *data, int i)
 		ft_second_block(data, i);
 	else if (data->nb_b == 2)
 		ft_third_block(data, i);
+	else
+		ft_last_block(data, i);
 	return (data->error ? 0 : 1);
 }

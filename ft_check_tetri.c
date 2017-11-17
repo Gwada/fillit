@@ -6,7 +6,7 @@
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:28:40 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/17 18:51:29 by dlavaury         ###   ########.fr       */
+/*   Updated: 2017/11/17 20:42:22 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ void	ft_check_tetri(t_data *data)
 		{
 			if (data->buff[i] != '#' && data->buff[i] != '.')
 				data->error = 1;
-			if (data->buff[i] == '#' && ft_block_validator(data, i))
+			if (!data->error && data->buff[i] == '#'
+			&& ft_block_validator(data, i))
 				ft_find_type(data, i);
 		}
 		else if (data->buff[i] != '\n')
