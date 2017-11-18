@@ -6,7 +6,7 @@
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:28:40 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/17 20:42:22 by dlavaury         ###   ########.fr       */
+/*   Updated: 2017/11/18 14:41:10 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ void	ft_check_tetri(t_data *data)
 
 	i = -1;
 	data->nb_b = 0;
+	data->link = 0;
 	data->tetri[data->nb_tetri]->car = 'A' + data->nb_tetri;
 	while (++i < 20 && !data->error)
 	{
@@ -33,6 +34,8 @@ void	ft_check_tetri(t_data *data)
 			data->error = 1;
 	}
 	if ((data->buff[i] != '\n' && data->buff[i]) || data->nb_b != 4)
+		data->error = 1;
+	if (data->link != 8 && data->link != 6)
 		data->error = 1;
 	data->again = !data->buff[20] ? 0 : 1;
 	data->nb_tetri++;

@@ -6,7 +6,7 @@
 /*   By: dlavaury <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:25:22 by dlavaury          #+#    #+#             */
-/*   Updated: 2017/11/17 09:44:55 by dlavaury         ###   ########.fr       */
+/*   Updated: 2017/11/18 14:42:06 by dlavaury         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ typedef struct	s_data
 	int			ret;
 	int			nb_tetri;
 	int			nb_b;
+	int			link;
 	int			again;
 	int			error;
 	int			size;
