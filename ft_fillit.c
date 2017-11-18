@@ -40,7 +40,7 @@ int				ft_fillit(t_data *data, int tetri, int i, int j)
 			ft_mapoverside(&i, &j);
 		if (i == data->size)
 			return (ft_oversize(data, tetri));
-		if (ft_is_free(data, tetri, i, j))
+		if (data->map[i][j] == '.' && ft_is_free(data, tetri, i, j))
 			if (ft_fillit(data, tetri + 1, 0, 0))
 				return (1);
 			else
