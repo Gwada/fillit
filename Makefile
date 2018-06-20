@@ -18,22 +18,9 @@ NAME = fillit
 
 SRC = ft_bzero.c \
 	  ft_check_tetri.c \
-	  ft_init.c \
-	  ft_open_file.c \
-	  ft_param_error.c \
 	  ft_read_file.c \
-	  ft_tetri_error.c \
-	  ft_read_tetri.c \
-	  ft_new_tetri.c \
-	  ft_find_type.c \
-	  ft_block_validator.c \
 	  ft_fillit.c \
-	  ft_map_creator.c \
-	  ft_map_cleaner.c \
 	  ft_put_map.c \
-	  ft_is_free.c \
-	  ft_remove_last.c \
-	  ft_end_cleaner.c \
 	  main.c
 
 OBJ = $(SRC:.c=.o)
@@ -73,6 +60,7 @@ fclean:	clean
 	@rm -f $(NAME)
 	@echo "$(_YELLOW)fclean$(_END)	: $(_GREEN)done$(_END)"
 
-re: fclean all
+re: fclean
+	@make all
 
 .PHONY: all re fclean clean
